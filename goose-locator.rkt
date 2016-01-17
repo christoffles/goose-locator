@@ -29,10 +29,10 @@
   (cond [(empty? lst) false]
         [(string=? key (first (first lst))) (second (first lst))]
         [else (find-value (rest lst) key)]))
-;; this function is from my q4black
+
 
 ;; Useful Constants
-(define radius 6371)
+(define radius 6371) ; (of the earth)
 (define distance-threshold 1000)
 
 (define (nearest-nest building)
@@ -80,7 +80,7 @@
                                           building-coord))
            (cond [(< dist (first nearest))
                    (nearest-nest-acc building-coord (rest logn) 
-                               (list dist (find-value (first logn)                                                         "location")))]
+                               (list dist (find-value (first logn) "location")))]
                  [else (nearest-nest-acc building-coord (rest logn)
                                          nearest)])]))
   (define build-coord 

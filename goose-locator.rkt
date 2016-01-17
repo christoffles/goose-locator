@@ -67,8 +67,6 @@
                       (degrees->radians (second coord2))))
   
   
-
-  
   ;; (nearest-nest-acc building-coord logn nearest) consumes a set of 
   ;;   coordinates and a list of goose nest details and produces
   ;;   the goose nest nearest to the building
